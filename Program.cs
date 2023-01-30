@@ -1,10 +1,15 @@
-Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.ReadLine());
-int num1 = 0;
-while (num > 0)
+void Array()
 {
-    num1 += num % 10;
-    num = num / 10;
+Console.Write("Введите длину массива: ");
+int len = Convert.ToInt32(Console.ReadLine());
+
+int[] list = new int[len];
+
+for (int i = 0; i < len; i++)
+{
+list[i] = new Random().Next(0, len);
+Console.WriteLine($"list[{i}] = {list[i]};");
+}
 }
 
-Console.WriteLine(num1);
+Array();
