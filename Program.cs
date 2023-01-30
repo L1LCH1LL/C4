@@ -1,7 +1,10 @@
-﻿Console.WriteLine("Введите число которое возводится степень");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите степень");
-int num2 = Convert.ToInt32(Console.ReadLine());
-double num3 = Math.Pow(num1,num2);
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+int num1 = 0;
+while (num > 0)
+{
+    num1 += num % 10;
+    num = num / 10;
+}
 
-Console.WriteLine(num3);
+Console.WriteLine(num1);
